@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b0b">
+  <meta name="description" content="MAD Restaurant — Meals And Delights. Good Food. Great Mood.">
+  <title>MAD Restaurant | Meals And Delights</title>
+
+  <!-- Google Fonts: Outfit + Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar container" aria-label="Main navigation">
+
+      <a class="logo" href="#home" aria-label="MAD Restaurant home">
+        <span class="logo-main">MAD</span>
+        <span class="logo-subtitle">MEALS AND DELIGHTS</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle"
+        type="button" aria-label="Open navigation menu"
+        aria-expanded="false" aria-controls="navLinks">☰</button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#menu">Menu</a>
+        <a href="#dine-in">Dine In</a>
+        <a href="#contact">Contact Us</a>
+        <a class="btn btn-gold nav-book" href="#dine-in">Book a Table</a>
+      </div>
+
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-shade"></div>
+      <div class="hero-content container">
+        <p class="eyebrow">WELCOME TO MAD RESTAURANT</p>
+        <h1>Good Food.<br><span>Great Mood.</span></h1>
+        <p class="hero-text">
+          Meals And Delights — delicious food, unforgettable moments.
+        </p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-gold">Explore Our Menu</a>
+          <a href="#dine-in" class="btn btn-outline">Book a Table</a>
+        </div>
+      </div>
+      <a class="hero-scroll" href="#about">SCROLL TO DISCOVER ↓</a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section container reveal" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">OUR STORY</p>
+        <h2>A Little More Than <span class="gold-text">Food</span></h2>
+        <p class="section-intro">
+          At MAD Restaurant, every meal is an opportunity to enjoy good
+          food and create memorable moments. Explore our menu and imagine
+          your next gathering in a welcoming dining space.
+        </p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="feature-icon">✦</span>
+          <h3>Made With Care</h3>
+          <p>Thoughtfully presented dishes and flavours to explore.</p>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon">❋</span>
+          <h3>Something for Every Craving</h3>
+          <p>Browse a variety of sample menu choices for different moods.</p>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon">♡</span>
+          <h3>Moments Together</h3>
+          <p>A place to plan a meal with friends, family, or your favourite people.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="section menu-section" id="menu">
+      <div class="container reveal">
+        <div class="section-heading">
+          <p class="eyebrow">A MENU TO EXPLORE</p>
+          <h2>Find Your <span class="gold-text">Favourite</span></h2>
+          <p class="section-intro">
+            Browse the sample menu by category. Replace sample dishes and
+            prices with the restaurant's actual menu before publishing.
+          </p>
+        </div>
+
+        <div class="menu-filters" role="group" aria-label="Filter menu by category">
+          <button class="filter-btn active" type="button" data-category="All" aria-pressed="true">All</button>
+          <button class="filter-btn" type="button" data-category="Starters" aria-pressed="false">Starters</button>
+          <button class="filter-btn" type="button" data-category="Main Course" aria-pressed="false">Main Course</button>
+          <button class="filter-btn" type="button" data-category="Biryani" aria-pressed="false">Biryani</button>
+          <button class="filter-btn" type="button" data-category="Chinese" aria-pressed="false">Chinese</button>
+          <button class="filter-btn" type="button" data-category="Desserts" aria-pressed="false">Desserts</button>
+          <button class="filter-btn" type="button" data-category="Beverages" aria-pressed="false">Beverages</button>
+        </div>
+
+        <div class="menu-grid" id="menuGrid" aria-live="polite"></div>
+        <p class="menu-note">
+          Sample items and prices for demonstration only.
+        </p>
+      </div>
+    </section>
+
+    <!-- DINE IN / BOOKING -->
+    <section class="section container reveal" id="dine-in">
+      <div class="booking-layout">
+        <div class="booking-info">
+          <p class="eyebrow">YOUR TABLE AWAITS</p>
+          <h2>Make Time for <span class="gold-text">Good Moments</span></h2>
+          <p>
+            Planning a meal with friends or family? Send a reservation
+            request below. The restaurant must confirm availability separately.
+          </p>
+
+          <div class="booking-photo" role="img"
+            aria-label="Warmly lit restaurant dining room"></div>
+
+          <div class="booking-highlight">
+            <span>✦</span>
+            <div>
+              <h3>Good Food. Great Company.</h3>
+              <p>Make time for the moments that matter.</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="form-card" id="bookingForm">
+          <p class="eyebrow">DINE IN</p>
+          <h3>Request a Table</h3>
+
+          <label for="bookingName">Full Name *</label>
+          <input id="bookingName" name="name" type="text"
+            autocomplete="name" required>
+
+          <label for="bookingPhone">Phone Number *</label>
+          <input id="bookingPhone" name="phone" type="tel"
+            autocomplete="tel" inputmode="tel" required>
+
+          <label for="bookingEmail">Email Address (optional)</label>
+          <input id="bookingEmail" name="email" type="email"
+            autocomplete="email">
+
+          <div class="form-row">
+            <div>
+              <label for="bookingDate">Date *</label>
+              <input id="bookingDate" name="date" type="date" required>
+            </div>
+            <div>
+              <label for="bookingTime">Time *</label>
+              <input id="bookingTime" name="time" type="time" required>
+            </div>
+          </div>
+
+          <label for="bookingGuests">Number of Guests *</label>
+          <select id="bookingGuests" name="guests" required>
+            <option value="">Choose guests</option>
+            <option value="1">1 guest</option>
+            <option value="2">2 guests</option>
+            <option value="3">3 guests</option>
+            <option value="4">4 guests</option>
+            <option value="5">5 guests</option>
+            <option value="6">6 guests</option>
+            <option value="7+">7 or more guests</option>
+          </select>
+
+          <label for="bookingRequests">Special Requests (optional)</label>
+          <textarea id="bookingRequests" name="requests" rows="3"
+            placeholder="Any details you'd like to share?"></textarea>
+
+          <button class="btn btn-gold btn-full" type="submit">
+            Send Reservation Request
+          </button>
+
+          <p class="form-message" id="bookingMessage"
+            role="status" aria-live="polite"></p>
+          <p class="form-note">
+            Demo only: this form does not send or save reservations yet.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact">
+      <div class="container reveal">
+        <div class="section-heading">
+          <p class="eyebrow">GET IN TOUCH</p>
+          <h2>Let's <span class="gold-text">Connect</span></h2>
+          <p class="section-intro">
+            Replace the placeholders with verified restaurant details before publishing.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-details">
+            <h3>Visit MAD Restaurant</h3>
+
+            <div class="contact-line">
+              <span>⌖</span>
+              <p><strong>Address</strong><br>[Add restaurant address]</p>
+            </div>
+
+            <div class="contact-line">
+              <span>☎</span>
+              <p><strong>Phone</strong><br>[Add contact number]</p>
+            </div>
+
+            <div class="contact-line">
+              <span>✉</span>
+              <p><strong>Email</strong><br>[Add restaurant email]</p>
+            </div>
+
+            <div class="contact-line">
+              <span>◷</span>
+              <p><strong>Opening Hours</strong><br>[Add opening hours]</p>
+            </div>
+
+            <a class="text-link" href="#contact" id="mapLink">
+              Add Google Maps link ↗
+            </a>
+            <a class="btn btn-outline" href="#contact" id="whatsappLink">
+              Chat on WhatsApp ↗
+            </a>
+            <p class="form-note">Contact details and links are placeholders.</p>
+          </div>
+
+          <form class="form-card" id="contactForm">
+            <p class="eyebrow">SEND A MESSAGE</p>
+            <h3>Contact Us</h3>
+
+            <label for="contactName">Full Name *</label>
+            <input id="contactName" name="name" type="text"
+              autocomplete="name" required>
+
+            <label for="contactMethod">Phone Number or Email *</label>
+            <input id="contactMethod" name="contact" type="text" required>
+
+            <label for="contactSubject">Subject *</label>
+            <input id="contactSubject" name="subject" type="text" required>
+
+            <label for="contactMessageInput">Message *</label>
+            <textarea id="contactMessageInput" name="message"
+              rows="4" required></textarea>
+
+            <button class="btn btn-gold btn-full" type="submit">
+              Submit Message
+            </button>
+
+            <p class="form-message" id="contactStatus"
+              role="status" aria-live="polite"></p>
+            <p class="form-note">
+              Demo only: messages are not sent or stored until a service is connected.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <a class="logo" href="#home" aria-label="MAD Restaurant home">
+        <span class="logo-main">MAD</span>
+        <span class="logo-subtitle">MEALS AND DELIGHTS</span>
+      </a>
+      <p class="footer-tagline">GOOD FOOD. GREAT MOOD.</p>
+
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#dine-in">Dine In</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <p class="copyright">
+        © <span id="currentYear"></span> MAD Restaurant. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" type="button"
+    aria-label="Back to top">↑</button>
+
+</body>
+</html>
